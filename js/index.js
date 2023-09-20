@@ -30,3 +30,35 @@ let lyrics = function(){
     document.getElementById("c").innerHTML = c;
 }
 
+
+
+var realCode = 2222;
+var input = document.querySelector('#code')
+var submit = document.querySelector('#submit')
+var output = document.querySelector('#nice')
+
+var array = []
+
+input.addEventListener('input', (e) => {
+    var inputed = e.target.value
+    var forCheck = Number(inputed)
+    // console.log(typeof forCheck)
+    array.push(forCheck)
+})
+
+submit.addEventListener('click', () => {
+    // console.log(forCheck)
+    if (array[array.length -1] == realCode) {
+        output.innerHTML = "nice";
+    } else {
+        output.innerHTML = "not nice";
+
+    }
+    // console.log(typeof realCode)
+})
+
+
+
+
+
+
